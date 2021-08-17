@@ -27,6 +27,15 @@
     ]
   },
   "projects": {
+    "core": {
+      "tags": []
+    },
+    "lib-a": {
+      "tags": []
+    },
+    "lib-b": {
+      "tags": []
+    },
     "playground": {
       "tags": []
     },

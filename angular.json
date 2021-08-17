@@ -1,6 +1,81 @@
 {
   "version": 1,
   "projects": {
+    "core": {
+      "projectType": "library",
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "prefix": "injection-token-exp",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core"],
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/src/**/*.ts",
+              "libs/core/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "lib-a": {
+      "projectType": "library",
+      "root": "libs/lib-a",
+      "sourceRoot": "libs/lib-a/src",
+      "prefix": "injection-token-exp",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lib-a"],
+          "options": {
+            "jestConfig": "libs/lib-a/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/lib-a/src/**/*.ts",
+              "libs/lib-a/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "lib-b": {
+      "projectType": "library",
+      "root": "libs/lib-b",
+      "sourceRoot": "libs/lib-b/src",
+      "prefix": "injection-token-exp",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lib-b"],
+          "options": {
+            "jestConfig": "libs/lib-b/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/lib-b/src/**/*.ts",
+              "libs/lib-b/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "playground": {
       "projectType": "application",
       "root": "apps/playground",
